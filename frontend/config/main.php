@@ -43,6 +43,21 @@ return [
             'rules' => [
             ],
         ],
+        'authClientCollection' => [
+            'class'   => \yii\authclient\Collection::class,
+            'clients' => [
+                // here is the list of clients you want to use
+                // you can read more in the "Available clients" section
+                'vkontakte' => include_once('vkAuth.php'),
+            ],
+        ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@dektrium/user/views' => '@app/views/user'
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
